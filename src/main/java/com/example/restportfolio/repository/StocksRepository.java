@@ -1,7 +1,7 @@
-package com.example.restportfolio;
+package com.example.restportfolio.repository;
 
+import com.example.restportfolio.model.Stocks;
 import org.springframework.data.r2dbc.repository.R2dbcRepository;
-import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 

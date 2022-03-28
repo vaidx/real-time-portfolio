@@ -1,4 +1,4 @@
-package com.example.restportfolio;
+package com.example.restportfolio.service;
 
 import lombok.Data;
 import org.apache.commons.math3.distribution.NormalDistribution;

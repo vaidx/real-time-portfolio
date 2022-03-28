@@ -1,4 +1,4 @@
-package com.example.restportfolio;
+package com.example.restportfolio.model;
 
 public class Portfolio {
 

@@ -1,18 +1,10 @@
-package com.example.restportfolio;
+package com.example.restportfolio.repository;
 
-import lombok.RequiredArgsConstructor;
+import com.example.restportfolio.model.Options;
+import com.example.restportfolio.model.Stocks;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.http.codec.ServerSentEvent;
-import org.springframework.stereotype.Repository;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
-
-import java.time.Duration;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
 
 @RestController
 public class PortfolioRestController {

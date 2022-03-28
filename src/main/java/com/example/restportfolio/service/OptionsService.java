@@ -1,4 +1,4 @@
-package com.example.restportfolio;
+package com.example.restportfolio.service;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.springframework.stereotype.Service;
 

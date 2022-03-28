@@ -1,5 +1,6 @@
 package com.example.restportfolio;
 
+import com.example.restportfolio.service.OptionsService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

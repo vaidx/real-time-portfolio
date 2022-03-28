@@ -1,4 +1,4 @@
-package com.example.restportfolio;
+package com.example.restportfolio.model;
 
 import lombok.*;
 
@@ -9,9 +9,7 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-@Getter
-@Setter
-@ToString
+@Data
 @Table(name="STOCKS")
 public class Stocks {
 
