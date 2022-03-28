@@ -26,12 +26,12 @@ public class DatabaseConfig {
 
         return new H2ConnectionFactory(
                 H2ConnectionConfiguration.builder()
-//                        .inMemory("portfolio")
-                        .file("./testdb")
+                        .inMemory("portfolio")
+//                        .file("./portfolio")
                         .property("DB_CLOSE_DELAY","-1")
 //                        .property("DB_CLOSE_ON_EXIT", "FALSE")
                         .username("sa")
-                        .url("r2dbc:h2:mem:///testdb")
+                        .url("r2dbc:h2:mem:///portfolio")
                         .build()
         );
     }
