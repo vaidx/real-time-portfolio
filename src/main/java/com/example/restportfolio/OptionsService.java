@@ -1,7 +1,8 @@
 package com.example.restportfolio;
 import org.apache.commons.math3.distribution.NormalDistribution;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class OptionsService {
 
     private final static double R = 0.02; // risk free rate per annum

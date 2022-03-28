@@ -1,8 +1,6 @@
 package com.example.restportfolio;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,9 +9,9 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @Table(name="OPTIONS")
 public class Options {
 
@@ -27,12 +25,12 @@ public class Options {
     @Column(name="TYPE")
     private String type;
     @Column(name="POSITION")
-    private int pos; // Long ( =+1 ) or Short ( =-1 )
+    private int position; // Long ( =+1 ) or Short ( =-1 )
 
-    @Column(name="TIME_TO_MAT")
-    private int timeToMaturity; // in years
+    @Column(name="TTM")
+    private double ttm; // time to maturity in years
     @Column(name="STRIKE_PRICE")
     private BigDecimal strikePrice;
-    @Column(name="STD_DEV")
-    private double stDev;
+    @Column(name="SIGMA")
+    private double sigma;
 }

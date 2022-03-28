@@ -3,10 +3,12 @@ package com.example.restportfolio;
 import lombok.Data;
 import org.apache.commons.math3.distribution.NormalDistribution;
 import org.apache.commons.math3.util.FastMath;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
-@Data
+@Service
 public class StocksService {
         NormalDistribution nd = new NormalDistribution();
         private final static long DTGBM_value = 7257600;

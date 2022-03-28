@@ -1,5 +1,6 @@
 package com.example.restportfolio;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.codec.ServerSentEvent;
@@ -18,8 +19,8 @@ public class PortfolioRestController {
 
     @Autowired
     StocksRepository stRepo;
-    OptionsRepository oRepo;
-//  StocksService spu;
+    @Autowired
+    OptionsRepository osRepo;
 
     @RequestMapping("/stocks")
     @ResponseBody
@@ -30,8 +31,15 @@ public class PortfolioRestController {
     @RequestMapping("/options")
     @ResponseBody
     public Flux<Options> viewOptions() {
-        return oRepo.findAll();
+        return osRepo.findAll();
     }
+
+//    // See https://zetcode.com/springboot/text/
+//    @RequestMapping("/portfolio")
+//    @ResponseBody
+//    public Flux<Options> portfolioDisplay() {
+//        return oRepo.findAll();
+//    }
 
 //    @RequestMapping("/stock/transaction")
 //    @GetMapping(produces = MediaType.APPLICATION_NDJSON_VALUE)
@@ -70,6 +78,7 @@ public class PortfolioRestController {
 //        });
 //        logger.info("Stocks updated.");
 //    }
+
 
 
 

@@ -1,8 +1,6 @@
 package com.example.restportfolio;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,9 +9,9 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 @Entity
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
+@Getter
+@Setter
+@ToString
 @Table(name="STOCKS")
 public class Stocks {
 
@@ -27,10 +25,10 @@ public class Stocks {
     @Column(name="TYPE")
     private String type;
     @Column(name="POSITION")
-    private int pos; // Long ( =+1 ) or Short ( =-1 )
+    private int position; // Long ( =+1 ) or Short ( =-1 )
 
-    @Column(name="EXP_RET")
+    @Column(name="MU")
     private double mu; // expected return on the stock + static + unique value between 0 and 1
-    @Column(name="STD_DEV")
+    @Column(name="SIGMA")
     private double sigma; // annualized standard deviation + static + unique value between 0 and 1
 }
