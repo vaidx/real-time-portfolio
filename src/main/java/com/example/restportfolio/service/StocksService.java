@@ -10,6 +10,13 @@ import java.math.BigDecimal;
 
 @Service
 public class StocksService {
+        //Only put static data in h2
+        //Implement a class making a stock simulator <- Takes a ticker and updates randomly and push to a Flux<Double>
+                // Should have a public Flux<Pair<String, Double>> getStockPriceUpdate(String Ticker) {...}
+                // public Flux<Double> getStockPriceUpdateAll() { return Flux.merge(...) }
+
+        //Portfolio -> List of stocks/options -> map this to a List<Flux<Double>> -> Merge the flux
+
         NormalDistribution nd = new NormalDistribution();
         private final static long DTGBM_value = 7257600;
 

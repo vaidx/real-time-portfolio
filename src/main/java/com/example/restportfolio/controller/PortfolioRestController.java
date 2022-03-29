@@ -1,7 +1,9 @@
-package com.example.restportfolio.repository;
+package com.example.restportfolio.controller;
 
 import com.example.restportfolio.model.Options;
 import com.example.restportfolio.model.Stocks;
+import com.example.restportfolio.repository.OptionsRepository;
+import com.example.restportfolio.repository.StocksRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
